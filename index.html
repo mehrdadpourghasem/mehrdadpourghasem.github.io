@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Title</title>
+    <title>Your Name - Academic Website</title>
     <style>
         * {
             margin: 0;
@@ -60,10 +60,23 @@
             color: #0066cc;
             text-decoration: none;
             font-size: 0.95em;
+            cursor: pointer;
         }
 
         nav a:hover {
             text-decoration: underline;
+        }
+
+        nav a.active {
+            font-weight: 600;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
         }
 
         .content {
@@ -78,45 +91,144 @@
             font-weight: 600;
         }
 
-        .intro a {
+        .intro a, p a, li a {
             color: #0066cc;
             text-decoration: none;
         }
 
-        .intro a:hover {
+        .intro a:hover, p a:hover, li a:hover {
             text-decoration: underline;
         }
 
-        .section {
-            margin-bottom: 30px;
+        h2 {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-top: 30px;
         }
 
-        .section h3 {
+        h3 {
             font-size: 1.1em;
             font-weight: 600;
             margin-bottom: 15px;
+            margin-top: 25px;
         }
 
-        .section ul {
+        p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        ul {
             list-style: none;
             padding-left: 0;
         }
 
-        .section li {
+        ul li {
             margin-bottom: 12px;
             line-height: 1.7;
         }
 
-        .section li::before {
+        ul li::before {
             content: "• ";
             color: #666;
             font-weight: bold;
             margin-right: 8px;
         }
 
-        p {
-            margin-bottom: 15px;
-            line-height: 1.7;
+        .paper {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .paper:last-child {
+            border-bottom: none;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            font-size: 1.05em;
+            margin-bottom: 5px;
+        }
+
+        .paper-authors {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        .paper-info {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .paper-links a {
+            font-size: 0.9em;
+        }
+
+        .cv-section {
+            margin-bottom: 35px;
+        }
+
+        .cv-item {
+            margin-bottom: 20px;
+        }
+
+        .cv-item-title {
+            font-weight: 600;
+        }
+
+        .cv-item-detail {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .course {
+            margin-bottom: 25px;
+        }
+
+        .course-title {
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        .course-code {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .blog-post {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .blog-post:last-child {
+            border-bottom: none;
+        }
+
+        .blog-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .resource-category {
+            margin-bottom: 30px;
         }
 
         @media (max-width: 600px) {
@@ -137,36 +249,37 @@
 <body>
     <div class="container">
         <header>
-            <h1><a href="/">Your Name</a></h1>
+            <h1><a href="#" onclick="showPage('home'); return false;">Your Name</a></h1>
             <div class="subtitle">Your Title, Your Institution</div>
         </header>
 
         <nav>
-            <a href="/index">Home</a>
-            <a href="/cv">CV</a>
-            <a href="/research">Research</a>
-            <a href="/teaching">Teaching</a>
-            <a href="/blog">Blog</a>
-            <a href="/resources">Resources</a>
+            <a onclick="showPage('home')" class="active" id="nav-home">Home</a>
+            <a onclick="showPage('cv')" id="nav-cv">CV</a>
+            <a onclick="showPage('research')" id="nav-research">Research</a>
+            <a onclick="showPage('teaching')" id="nav-teaching">Teaching</a>
+            <a onclick="showPage('blog')" id="nav-blog">Blog</a>
+            <a onclick="showPage('resources')" id="nav-resources">Resources</a>
         </nav>
 
-        <div class="content">
-            <div class="intro">
-                <p><strong>Your Name</strong> [<a href="mailto:your.email@institution.edu">your.email@institution.edu</a>]</p>
-                <p>Position Title, <a href="#">Your Institution</a></p>
-            </div>
+        <!-- HOME PAGE -->
+        <div id="page-home" class="page active">
+            <div class="content">
+                <div class="intro">
+                    <p><strong>Your Name</strong> [<a href="mailto:your.email@institution.edu">your.email@institution.edu</a>]</p>
+                    <p>Position Title, <a href="#">Your Institution</a></p>
+                </div>
 
-            <p>
-                My research focuses on <strong>your primary research area</strong>, <strong>secondary area</strong>, 
-                and <strong>tertiary area</strong>. I explore how specific concepts shape outcomes in your field, 
-                with emphasis on particular methodologies or approaches.
-            </p>
+                <p>
+                    My research focuses on <strong>your primary research area</strong>, <strong>secondary area</strong>, 
+                    and <strong>tertiary area</strong>. I explore how specific concepts shape outcomes in your field, 
+                    with emphasis on particular methodologies or approaches.
+                </p>
 
-            <p>
-                Additional information about ongoing projects, collaborations, or key initiatives you're working on.
-            </p>
+                <p>
+                    Additional information about ongoing projects, collaborations, or key initiatives you're working on.
+                </p>
 
-            <div class="section">
                 <h3>Additional Information</h3>
                 <ul>
                     <li>Background detail about your education, previous positions, or career path.</li>
@@ -176,6 +289,247 @@
                 </ul>
             </div>
         </div>
+
+        <!-- CV PAGE -->
+        <div id="page-cv" class="page">
+            <div class="content">
+                <h2>Curriculum Vitae</h2>
+                <p><a href="#">Download PDF version</a></p>
+
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-title">Ph.D. in Your Field</div>
+                        <div class="cv-item-detail">University Name, Year</div>
+                        <div class="cv-item-detail">Dissertation: "Your Dissertation Title"</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-title">M.A./M.S. in Your Field</div>
+                        <div class="cv-item-detail">University Name, Year</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-title">B.A./B.S. in Your Field</div>
+                        <div class="cv-item-detail">University Name, Year</div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Academic Positions</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-title">Assistant Professor</div>
+                        <div class="cv-item-detail">Your Institution, Year-Present</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-title">Postdoctoral Researcher</div>
+                        <div class="cv-item-detail">Institution Name, Year-Year</div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Awards & Honors</h3>
+                    <ul>
+                        <li>Award Name, Year</li>
+                        <li>Fellowship Name, Year</li>
+                        <li>Grant Name, Year</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Service</h3>
+                    <ul>
+                        <li>Committee membership or role</li>
+                        <li>Reviewer for journals</li>
+                        <li>Conference organization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESEARCH PAGE -->
+        <div id="page-research" class="page">
+            <div class="content">
+                <h2>Research</h2>
+
+                <h3>Working Papers</h3>
+                <div class="paper">
+                    <div class="paper-title">Title of Your Working Paper</div>
+                    <div class="paper-authors">with Co-Author Name(s)</div>
+                    <p>Brief abstract or description of the paper. What question does it address? What are the main findings?</p>
+                    <div class="paper-links">
+                        <a href="#">[PDF]</a>
+                        <a href="#">[SSRN]</a>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title">Another Working Paper Title</div>
+                    <div class="paper-authors">Solo authored or with Co-Authors</div>
+                    <p>Description of this research project and its contribution to the field.</p>
+                    <div class="paper-links">
+                        <a href="#">[PDF]</a>
+                    </div>
+                </div>
+
+                <h3>Publications</h3>
+                <div class="paper">
+                    <div class="paper-title">Published Paper Title</div>
+                    <div class="paper-authors">with Co-Author Name(s)</div>
+                    <div class="paper-info"><em>Journal Name</em>, Volume(Issue), Pages, Year</div>
+                    <p>Brief description of the published work.</p>
+                    <div class="paper-links">
+                        <a href="#">[PDF]</a>
+                        <a href="#">[Journal]</a>
+                        <a href="#">[Replication Code]</a>
+                    </div>
+                </div>
+
+                <h3>Work in Progress</h3>
+                <ul>
+                    <li>Project title and brief description</li>
+                    <li>Another ongoing research project</li>
+                    <li>Early-stage investigation into specific topic</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TEACHING PAGE -->
+        <div id="page-teaching" class="page">
+            <div class="content">
+                <h2>Teaching</h2>
+
+                <h3>Current Courses</h3>
+                <div class="course">
+                    <div class="course-title">Course Name</div>
+                    <div class="course-code">Course Code | Semester Year</div>
+                    <p>Brief description of the course content, level (undergraduate/graduate), and what students learn.</p>
+                    <p><a href="#">Syllabus</a></p>
+                </div>
+
+                <div class="course">
+                    <div class="course-title">Another Course Name</div>
+                    <div class="course-code">Course Code | Semester Year</div>
+                    <p>Description of this course and its objectives.</p>
+                    <p><a href="#">Syllabus</a> | <a href="#">Course Materials</a></p>
+                </div>
+
+                <h3>Past Courses</h3>
+                <ul>
+                    <li>Previous Course Name (Course Code) - Institution, Year</li>
+                    <li>Another Past Course - Institution, Year</li>
+                    <li>Graduate Seminar Topic - Institution, Year</li>
+                </ul>
+
+                <h3>Teaching Philosophy</h3>
+                <p>
+                    A brief statement about your approach to teaching, what you value in the classroom, 
+                    and how you engage students with the material. This can include your methods, 
+                    goals for student learning, and pedagogical approach.
+                </p>
+            </div>
+        </div>
+
+        <!-- BLOG PAGE -->
+        <div id="page-blog" class="page">
+            <div class="content">
+                <h2>Blog</h2>
+
+                <div class="blog-post">
+                    <div class="blog-title"><a href="#">Recent Blog Post Title</a></div>
+                    <div class="blog-date">January 15, 2026</div>
+                    <p>
+                        A preview or excerpt of your blog post. This could discuss recent research findings, 
+                        commentary on current events in your field, or insights from your work.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <div class="blog-title"><a href="#">Another Interesting Topic</a></div>
+                    <div class="blog-date">December 20, 2025</div>
+                    <p>
+                        Brief excerpt or summary of this post. Could be about teaching experiences, 
+                        conference reflections, or thoughts on methodology.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <div class="blog-title"><a href="#">Thoughts on Recent Developments</a></div>
+                    <div class="blog-date">November 8, 2025</div>
+                    <p>
+                        Summary of this blog post discussing developments in your research area or field.
+                    </p>
+                </div>
+
+                <h3>External Writing</h3>
+                <ul>
+                    <li><a href="#">Op-ed or article title</a> - Publication Name, Date</li>
+                    <li><a href="#">Guest post or interview</a> - Platform/Publication, Date</li>
+                    <li><a href="#">Newsletter or Substack</a> - Description and link</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RESOURCES PAGE -->
+        <div id="page-resources" class="page">
+            <div class="content">
+                <h2>Resources</h2>
+
+                <div class="resource-category">
+                    <h3>For Students</h3>
+                    <ul>
+                        <li><a href="#">Research guide or methodology notes</a></li>
+                        <li><a href="#">Advice for graduate students</a></li>
+                        <li><a href="#">Reading lists and recommended books</a></li>
+                        <li><a href="#">LaTeX templates or code examples</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-category">
+                    <h3>Data & Code</h3>
+                    <ul>
+                        <li><a href="#">Dataset name and description</a> - Brief explanation of what it contains</li>
+                        <li><a href="#">Replication code repository</a> - For published papers</li>
+                        <li><a href="#">Software package or tool</a> - Description of what it does</li>
+                    </ul>
+                </div>
+
+                <div class="resource-category">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Professional organization or society</a></li>
+                        <li><a href="#">Journal or publication venue</a></li>
+                        <li><a href="#">Research network or group</a></li>
+                        <li><a href="#">Data sources or repositories</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-category">
+                    <h3>Tools I Use</h3>
+                    <ul>
+                        <li><strong>Software:</strong> List of programs you use for analysis, writing, etc.</li>
+                        <li><strong>Reference Management:</strong> Tools for organizing literature</li>
+                        <li><strong>Visualization:</strong> Tools for creating figures and graphics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function showPage(pageName) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Show selected page
+            document.getElementById('page-' + pageName).classList.add('active');
+
+            // Add active class to selected nav link
+            document.getElementById('nav-' + pageName).classList.add('active');
+        }
+    </script>
 </body>
 </html>
