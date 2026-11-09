@@ -3,533 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Academic Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 2em;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #000;
-        }
-
-        h1 a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1em;
-            margin-bottom: 30px;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 50px;
-            padding: 15px 0;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        nav a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 0.95em;
-            cursor: pointer;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        nav a.active {
-            font-weight: 600;
-        }
-
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        .content {
-            margin-top: 40px;
-        }
-
-        .intro {
-            margin-bottom: 30px;
-        }
-
-        .intro strong {
-            font-weight: 600;
-        }
-
-        .intro a, p a, li a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .intro a:hover, p a:hover, li a:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-size: 1.4em;
-            font-weight: 600;
-            margin-bottom: 20px;
-            margin-top: 30px;
-        }
-
-        h3 {
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            margin-top: 25px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            margin-bottom: 12px;
-            line-height: 1.7;
-        }
-
-        ul li::before {
-            content: "• ";
-            color: #666;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        .paper {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .paper:last-child {
-            border-bottom: none;
-        }
-
-        .paper-title {
-            font-weight: 600;
-            font-size: 1.05em;
-            margin-bottom: 5px;
-        }
-
-        .paper-authors {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 8px;
-        }
-
-        .paper-info {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .paper-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .paper-links a {
-            font-size: 0.9em;
-        }
-
-        .cv-section {
-            margin-bottom: 35px;
-        }
-
-        .cv-item {
-            margin-bottom: 20px;
-        }
-
-        .cv-item-title {
-            font-weight: 600;
-        }
-
-        .cv-item-detail {
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        .course {
-            margin-bottom: 25px;
-        }
-
-        .course-title {
-            font-weight: 600;
-            font-size: 1.05em;
-        }
-
-        .course-code {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .blog-post {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .blog-post:last-child {
-            border-bottom: none;
-        }
-
-        .blog-title {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .blog-date {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-
-        .resource-category {
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 15px;
-            }
-
-            h1 {
-                font-size: 1.6em;
-            }
-
-            nav {
-                gap: 10px;
-            }
-        }
-    </style>
+    <title>Mehrdad Pourghasem | Economics PhD Candidate</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Fifth-year Economics PhD candidate at Penn State studying competition and market structure in U.S. health care markets.">
+    <link rel="canonical" href="https://mehrdadpourghasem.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mehrdad Pourghasem | Economics PhD Candidate">
+    <meta property="og:description" content="Fifth-year Economics PhD candidate at Penn State studying competition and market structure in U.S. health care markets.">
+    <meta property="og:image" content="https://mehrdadpourghasem.github.io/profile.png">
+    <meta property="og:url" content="https://mehrdadpourghasem.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="author" content="Mehrdad Pourghasem">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="#" onclick="showPage('home'); return false;">Your Name</a></h1>
-            <div class="subtitle">Your Title, Your Institution</div>
-        </header>
+    <!-- Animated Background -->
+    <div class="gradient-bg"></div>
+    <div class="grain-overlay"></div>
 
-        <nav>
-            <a onclick="showPage('home')" class="active" id="nav-home">Home</a>
-            <a onclick="showPage('cv')" id="nav-cv">CV</a>
-            <a onclick="showPage('research')" id="nav-research">Research</a>
-            <a onclick="showPage('teaching')" id="nav-teaching">Teaching</a>
-            <a onclick="showPage('blog')" id="nav-blog">Blog</a>
-            <a onclick="showPage('resources')" id="nav-resources">Resources</a>
-        </nav>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">Mehrdad Pourghasem</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+        <a href="mailto:pourghasem@psu.edu" class="nav-cta">Contact</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-        <!-- HOME PAGE -->
-        <div id="page-home" class="page active">
-            <div class="content">
-                <div class="intro">
-                    <p><strong>Your Name</strong> [<a href="mailto:your.email@institution.edu">your.email@institution.edu</a>]</p>
-                    <p>Position Title, <a href="#">Your Institution</a></p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Economics PhD Candidate · Penn State
                 </div>
-
-                <p>
-                    My research focuses on <strong>your primary research area</strong>, <strong>secondary area</strong>, 
-                    and <strong>tertiary area</strong>. I explore how specific concepts shape outcomes in your field, 
-                    with emphasis on particular methodologies or approaches.
+                <h1>
+                    Hi, I'm <span class="gradient-text">Mehrdad Pourghasem</span>
+                </h1>
+                <p class="hero-description">
+                    I'm a fifth-year Economics PhD candidate at Pennsylvania State University, expecting to defend in 2028. My research draws on empirical industrial organization and causal inference to analyze anticompetitive conduct and merger effects in U.S. health care markets.
                 </p>
+                <div class="hero-cta">
+                    <a href="research.html" class="btn btn-primary">
+                        Explore Research
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="cv.html" class="btn btn-secondary">
+                        View CV
+                    </a>
+                </div>
+                <div class="availability">Seeking a Summer 2027 internship in economic consulting</div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Mehrdad Pourghasem">
+            </div>
+        </div>
+    </section>
 
+    <!-- Research Overview -->
+    <section>
+        <div class="section-label">Research Focus</div>
+        <h2>What I Study</h2>
+        <p class="section-description">
+            My work spans health economics, industrial organization, and applied econometrics.
+        </p>
+        
+        <div class="research-grid">
+            <div class="research-card animate-on-scroll">
+                <h3>Health Economics</h3>
+                <p>Hospital-insurer bargaining, vertical integration of physician practices, and the competitive effects of consolidation in health care markets.</p>
+            </div>
+            <div class="research-card animate-on-scroll">
+                <h3>Empirical IO</h3>
+                <p>Structural demand estimation, BLP random-coefficients models, bargaining models, and merger simulation.</p>
+            </div>
+            <div class="research-card animate-on-scroll">
+                <h3>Causal Inference</h3>
+                <p>Panel data methods, instrumental variables, difference-in-differences, and natural experiments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Research -->
+    <section class="full-width">
+        <div class="section-inner">
+            <div class="section-label">Featured Work</div>
+            <h2>Job Market Paper</h2>
+            
+            <div class="paper-item animate-on-scroll" style="max-width: 900px;">
+                <span class="paper-status status-wip">Work in Progress</span>
+                <h4>When Insurers Own Doctors: Referral Control and Hospital Prices</h4>
                 <p>
-                    Additional information about ongoing projects, collaborations, or key initiatives you're working on.
+                    I estimate a model of hospital–insurer bargaining, household demand for insurance, and 
+                    individual demand for hospitals using detailed California admissions and claims data. 
+                    The project quantifies how insurers' acquisitions of physician practices affect patients' 
+                    hospital choices and, through greater control of referral flows, alter bargaining power 
+                    and negotiated hospital prices.
                 </p>
-
-                <h3>Additional Information</h3>
-                <ul>
-                    <li>Background detail about your education, previous positions, or career path.</li>
-                    <li>Information about a project, newsletter, or initiative you run. Include <a href="#">links</a> where relevant.</li>
-                    <li><strong>Projects:</strong> Description of side projects, tools, or resources you've created.</li>
-                    <li><strong>Tools:</strong> Any software, datasets, or resources you've developed and want to share.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- CV PAGE -->
-        <div id="page-cv" class="page">
-            <div class="content">
-                <h2>Curriculum Vitae</h2>
-                <p><a href="#">Download PDF version</a></p>
-
-                <div class="cv-section">
-                    <h3>Education</h3>
-                    <div class="cv-item">
-                        <div class="cv-item-title">Ph.D. in Your Field</div>
-                        <div class="cv-item-detail">University Name, Year</div>
-                        <div class="cv-item-detail">Dissertation: "Your Dissertation Title"</div>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-item-title">M.A./M.S. in Your Field</div>
-                        <div class="cv-item-detail">University Name, Year</div>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-item-title">B.A./B.S. in Your Field</div>
-                        <div class="cv-item-detail">University Name, Year</div>
-                    </div>
+                <div class="paper-tags">
+                    <span class="tag">Health Economics</span>
+                    <span class="tag">Vertical Integration</span>
+                    <span class="tag">Nash-in-Nash Bargaining</span>
+                    <span class="tag">Structural Estimation</span>
                 </div>
-
-                <div class="cv-section">
-                    <h3>Academic Positions</h3>
-                    <div class="cv-item">
-                        <div class="cv-item-title">Assistant Professor</div>
-                        <div class="cv-item-detail">Your Institution, Year-Present</div>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-item-title">Postdoctoral Researcher</div>
-                        <div class="cv-item-detail">Institution Name, Year-Year</div>
-                    </div>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Awards & Honors</h3>
-                    <ul>
-                        <li>Award Name, Year</li>
-                        <li>Fellowship Name, Year</li>
-                        <li>Grant Name, Year</li>
-                    </ul>
-                </div>
-
-                <div class="cv-section">
-                    <h3>Service</h3>
-                    <ul>
-                        <li>Committee membership or role</li>
-                        <li>Reviewer for journals</li>
-                        <li>Conference organization</li>
-                    </ul>
+                <div class="paper-links">
+                    <a class="paper-link" href="files/insurer_steering_slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+                    <span class="paper-link muted">Draft available on request</span>
                 </div>
             </div>
-        </div>
-
-        <!-- RESEARCH PAGE -->
-        <div id="page-research" class="page">
-            <div class="content">
-                <h2>Research</h2>
-
-                <h3>Working Papers</h3>
-                <div class="paper">
-                    <div class="paper-title">Title of Your Working Paper</div>
-                    <div class="paper-authors">with Co-Author Name(s)</div>
-                    <p>Brief abstract or description of the paper. What question does it address? What are the main findings?</p>
-                    <div class="paper-links">
-                        <a href="#">[PDF]</a>
-                        <a href="#">[SSRN]</a>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <div class="paper-title">Another Working Paper Title</div>
-                    <div class="paper-authors">Solo authored or with Co-Authors</div>
-                    <p>Description of this research project and its contribution to the field.</p>
-                    <div class="paper-links">
-                        <a href="#">[PDF]</a>
-                    </div>
-                </div>
-
-                <h3>Publications</h3>
-                <div class="paper">
-                    <div class="paper-title">Published Paper Title</div>
-                    <div class="paper-authors">with Co-Author Name(s)</div>
-                    <div class="paper-info"><em>Journal Name</em>, Volume(Issue), Pages, Year</div>
-                    <p>Brief description of the published work.</p>
-                    <div class="paper-links">
-                        <a href="#">[PDF]</a>
-                        <a href="#">[Journal]</a>
-                        <a href="#">[Replication Code]</a>
-                    </div>
-                </div>
-
-                <h3>Work in Progress</h3>
-                <ul>
-                    <li>Project title and brief description</li>
-                    <li>Another ongoing research project</li>
-                    <li>Early-stage investigation into specific topic</li>
-                </ul>
+            
+            <div style="margin-top: 32px;">
+                <a href="research.html" class="btn btn-primary">
+                    View All Research
+                    <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
+    </section>
 
-        <!-- TEACHING PAGE -->
-        <div id="page-teaching" class="page">
-            <div class="content">
-                <h2>Teaching</h2>
-
-                <h3>Current Courses</h3>
-                <div class="course">
-                    <div class="course-title">Course Name</div>
-                    <div class="course-code">Course Code | Semester Year</div>
-                    <p>Brief description of the course content, level (undergraduate/graduate), and what students learn.</p>
-                    <p><a href="#">Syllabus</a></p>
-                </div>
-
-                <div class="course">
-                    <div class="course-title">Another Course Name</div>
-                    <div class="course-code">Course Code | Semester Year</div>
-                    <p>Description of this course and its objectives.</p>
-                    <p><a href="#">Syllabus</a> | <a href="#">Course Materials</a></p>
-                </div>
-
-                <h3>Past Courses</h3>
-                <ul>
-                    <li>Previous Course Name (Course Code) - Institution, Year</li>
-                    <li>Another Past Course - Institution, Year</li>
-                    <li>Graduate Seminar Topic - Institution, Year</li>
-                </ul>
-
-                <h3>Teaching Philosophy</h3>
-                <p>
-                    A brief statement about your approach to teaching, what you value in the classroom, 
-                    and how you engage students with the material. This can include your methods, 
-                    goals for student learning, and pedagogical approach.
-                </p>
+    <!-- Contact Section -->
+    <section class="section-dark">
+        <div class="section-inner" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 style="margin-bottom: 24px;">Let's Connect</h2>
+            <p class="section-description" style="margin: 0 auto 32px; max-width: 600px;">
+                I'm happy to discuss my research or potential collaborations. Feel free to reach out.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="mailto:pourghasem@psu.edu" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    pourghasem@psu.edu
+                </a>
             </div>
         </div>
+    </section>
 
-        <!-- BLOG PAGE -->
-        <div id="page-blog" class="page">
-            <div class="content">
-                <h2>Blog</h2>
-
-                <div class="blog-post">
-                    <div class="blog-title"><a href="#">Recent Blog Post Title</a></div>
-                    <div class="blog-date">January 15, 2026</div>
-                    <p>
-                        A preview or excerpt of your blog post. This could discuss recent research findings, 
-                        commentary on current events in your field, or insights from your work.
-                    </p>
-                </div>
-
-                <div class="blog-post">
-                    <div class="blog-title"><a href="#">Another Interesting Topic</a></div>
-                    <div class="blog-date">December 20, 2025</div>
-                    <p>
-                        Brief excerpt or summary of this post. Could be about teaching experiences, 
-                        conference reflections, or thoughts on methodology.
-                    </p>
-                </div>
-
-                <div class="blog-post">
-                    <div class="blog-title"><a href="#">Thoughts on Recent Developments</a></div>
-                    <div class="blog-date">November 8, 2025</div>
-                    <p>
-                        Summary of this blog post discussing developments in your research area or field.
-                    </p>
-                </div>
-
-                <h3>External Writing</h3>
-                <ul>
-                    <li><a href="#">Op-ed or article title</a> - Publication Name, Date</li>
-                    <li><a href="#">Guest post or interview</a> - Platform/Publication, Date</li>
-                    <li><a href="#">Newsletter or Substack</a> - Description and link</li>
-                </ul>
-            </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mehrdad Pourghasem</p>
+        <div class="footer-links">
+            <a href="mailto:pourghasem@psu.edu">Email</a>
+            <a href="https://www.linkedin.com/in/mehrdad-pourghasem" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/mehrdadpourghasem" target="_blank" rel="noopener">GitHub</a>
         </div>
-
-        <!-- RESOURCES PAGE -->
-        <div id="page-resources" class="page">
-            <div class="content">
-                <h2>Resources</h2>
-
-                <div class="resource-category">
-                    <h3>For Students</h3>
-                    <ul>
-                        <li><a href="#">Research guide or methodology notes</a></li>
-                        <li><a href="#">Advice for graduate students</a></li>
-                        <li><a href="#">Reading lists and recommended books</a></li>
-                        <li><a href="#">LaTeX templates or code examples</a></li>
-                    </ul>
-                </div>
-
-                <div class="resource-category">
-                    <h3>Data & Code</h3>
-                    <ul>
-                        <li><a href="#">Dataset name and description</a> - Brief explanation of what it contains</li>
-                        <li><a href="#">Replication code repository</a> - For published papers</li>
-                        <li><a href="#">Software package or tool</a> - Description of what it does</li>
-                    </ul>
-                </div>
-
-                <div class="resource-category">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="#">Professional organization or society</a></li>
-                        <li><a href="#">Journal or publication venue</a></li>
-                        <li><a href="#">Research network or group</a></li>
-                        <li><a href="#">Data sources or repositories</a></li>
-                    </ul>
-                </div>
-
-                <div class="resource-category">
-                    <h3>Tools I Use</h3>
-                    <ul>
-                        <li><strong>Software:</strong> List of programs you use for analysis, writing, etc.</li>
-                        <li><strong>Reference Management:</strong> Tools for organizing literature</li>
-                        <li><strong>Visualization:</strong> Tools for creating figures and graphics</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    </footer>
 
     <script>
-        function showPage(pageName) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-            // Remove active class from all nav links
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => link.classList.remove('active'));
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-            // Show selected page
-            document.getElementById('page-' + pageName).classList.add('active');
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
 
-            // Add active class to selected nav link
-            document.getElementById('nav-' + pageName).classList.add('active');
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+            document.querySelector('.menu-toggle').classList.toggle('open');
         }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+                document.querySelector('.menu-toggle').classList.remove('open');
+            });
+        });
     </script>
 </body>
 </html>
