@@ -69,6 +69,28 @@
         </div>
     </header>
 
+    <!-- Inline PDF viewer -->
+    <section>
+        <div class="pdf-viewer">
+            <div class="pdf-tabs" role="tablist" aria-label="Choose a document">
+                <button class="pdf-tab" role="tab" aria-selected="true"
+                        data-pdf="files/Mehrdad_Pourghasem_Resume.pdf">Resume (1 page)</button>
+                <button class="pdf-tab" role="tab" aria-selected="false"
+                        data-pdf="files/Mehrdad_Pourghasem_CV.pdf">Full CV</button>
+            </div>
+
+            <iframe class="pdf-frame" id="pdfFrame"
+                    src="files/Mehrdad_Pourghasem_Resume.pdf"
+                    title="Mehrdad Pourghasem &mdash; Resume"></iframe>
+
+            <div class="pdf-fallback">
+                <p>Your browser can&rsquo;t show PDFs inline. Open or download it instead:</p>
+                <a class="btn btn-primary" id="pdfOpen"
+                   href="files/Mehrdad_Pourghasem_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+            </div>
+        </div>
+    </section>
+
     <!-- CV Content -->
     <section>
         <div class="cv-content">
@@ -270,6 +292,24 @@
     </footer>
 
     <script>
+        // PDF viewer tabs
+        (function () {
+            const frame = document.getElementById('pdfFrame');
+            const open  = document.getElementById('pdfOpen');
+            document.querySelectorAll('.pdf-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.pdf-tab')
+                        .forEach(t => t.setAttribute('aria-selected', String(t === tab)));
+                    const src = tab.dataset.pdf;
+                    if (frame) {
+                        frame.src = src;
+                        frame.title = 'Mehrdad Pourghasem \u2014 ' + tab.textContent.trim();
+                    }
+                    if (open) open.href = src;
+                });
+            });
+        })();
+
         // Active nav link on scroll
         const sections = document.querySelectorAll('.cv-section');
         const navLinks = document.querySelectorAll('.cv-nav-list a');
