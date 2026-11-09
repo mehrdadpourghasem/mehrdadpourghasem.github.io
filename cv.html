@@ -84,7 +84,7 @@
                     title="Mehrdad Pourghasem &mdash; Resume"></iframe>
 
             <div class="pdf-fallback">
-                <p>Your browser can&rsquo;t show PDFs inline. Open or download it instead:</p>
+                <p>This browser won&rsquo;t display PDFs inline. Open it in a new tab instead:</p>
                 <a class="btn btn-primary" id="pdfOpen"
                    href="files/Mehrdad_Pourghasem_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
             </div>
@@ -296,6 +296,22 @@
         (function () {
             const frame = document.getElementById('pdfFrame');
             const open  = document.getElementById('pdfOpen');
+            const wrap  = document.querySelector('.pdf-viewer');
+
+            // Show the fallback only when the browser really cannot render a PDF
+            // inline. navigator.pdfViewerEnabled is the standard signal; older
+            // browsers that lack it fall back to the mimeTypes check, and if
+            // neither is conclusive we show the frame and let the browser try.
+            function canShowPdf() {
+                if (typeof navigator.pdfViewerEnabled === 'boolean') {
+                    return navigator.pdfViewerEnabled;
+                }
+                if (navigator.mimeTypes && navigator.mimeTypes.length) {
+                    return !!navigator.mimeTypes['application/pdf'];
+                }
+                return true;
+            }
+            if (wrap && !canShowPdf()) wrap.classList.add('no-pdf');
             document.querySelectorAll('.pdf-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     document.querySelectorAll('.pdf-tab')

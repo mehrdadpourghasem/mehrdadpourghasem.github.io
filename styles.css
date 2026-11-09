@@ -1888,8 +1888,10 @@ footer p {
     display: block;
 }
 
-/* Browsers that will not render a PDF in an iframe (notably iOS Safari and
-   most Android browsers) get a card with direct links instead. */
+/* The fallback is shown only when the browser genuinely cannot render a PDF
+   inline (navigator.pdfViewerEnabled === false, e.g. iOS Safari). Window width
+   says nothing about that, so it is never used to decide. The .no-pdf class is
+   set by script on cv.html. */
 .pdf-fallback {
     display: none;
     border: 1px solid var(--border);
@@ -1905,11 +1907,15 @@ footer p {
     color: var(--text-secondary);
 }
 
+.pdf-viewer.no-pdf .pdf-frame { display: none; }
+.pdf-viewer.no-pdf .pdf-fallback { display: block; }
+
+/* Shorter frame on small screens — still shown, just sized to fit. */
 @media (max-width: 820px) {
-    .pdf-frame { display: none; }
-    .pdf-fallback { display: block; }
+    .pdf-frame { height: 560px; }
 }
 
 @media (max-width: 480px) {
+    .pdf-frame { height: 440px; }
     .pdf-tab { flex: 1 1 100%; text-align: center; }
 }
