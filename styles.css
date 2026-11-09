@@ -230,6 +230,20 @@ nav.scrolled {
     cursor: pointer;
     padding: 10px;
     z-index: 1001;
+    /* It is a <button> so keyboard users can reach it; strip the UA chrome. */
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 6px;
 }
 
 .menu-toggle span {
@@ -828,6 +842,13 @@ h2 {
 .status-completed { 
     background: rgba(0, 217, 36, 0.1); 
     color: #00a020; 
+}
+
+/* Neutral label for work that is neither in progress nor a finished product —
+   e.g. a third-year paper set aside. Avoids implying "Completed". */
+.status-note {
+    background: rgba(99, 91, 255, 0.08);
+    color: var(--primary);
 }
 
 .paper-item h4 {

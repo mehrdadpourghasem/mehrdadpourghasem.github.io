@@ -24,18 +24,19 @@
     <!-- Navigation -->
     <nav>
         <a href="index.html" class="logo">Mehrdad Pourghasem</a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="cv.html">CV</a></li>
             <li><a href="research.html" class="active">Research</a></li>
             <li><a href="experience.html">Experience</a></li>
         </ul>
         <a href="mailto:pourghasem@psu.edu" class="nav-cta">Contact</a>
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <button class="menu-toggle" type="button" onclick="toggleMenu()"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </nav>
 
     <!-- Page Header -->
@@ -105,7 +106,7 @@
             <div class="paper-category">
                 <div class="paper-category-label">Other Research Projects</div>
                 <div class="paper-item animate-on-scroll">
-                    <span class="paper-status status-completed">Completed</span>
+                    <span class="paper-status status-note">Third-Year Paper</span>
                     <h4>Heterogeneous Willingness-to-Pay for Electric Vehicles</h4>
                     <p>
                         Merged U.S. auto sales data with detailed vehicle attributes and estimated a random-coefficients 
@@ -119,7 +120,6 @@
                         <span class="tag">Consumer Choice</span>
                     </div>
                     <div class="paper-links">
-                        <a class="paper-link" href="files/ev_demand_paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
                         <a class="paper-link" href="files/ev_demand_slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
                     </div>
                 </div>
@@ -177,14 +177,21 @@
 
         // Mobile menu toggle
         function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('open');
-            document.querySelector('.menu-toggle').classList.toggle('open');
+            const links  = document.querySelector('.nav-links');
+            const toggle = document.querySelector('.menu-toggle');
+            const open   = links.classList.toggle('open');
+            toggle.classList.toggle('open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
         }
 
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('open');
-                document.querySelector('.menu-toggle').classList.remove('open');
+                const toggle = document.querySelector('.menu-toggle');
+                toggle.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('aria-label', 'Open navigation menu');
             });
         });
     </script>
