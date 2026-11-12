@@ -277,7 +277,7 @@ nav.scrolled {
 }
 
 .hero-content {
-    max-width: 720px;
+    max-width: 100%;
 }
 
 .hero-badge {
@@ -332,7 +332,7 @@ nav.scrolled {
 /* Second hero paragraph: the job market paper summary. Slightly smaller and
    wider than the opening line, and it carries the gap to the buttons. */
 .hero-description.hero-description-second {
-    max-width: 700px;
+    max-width: 820px;
     margin-top: -14px;
     animation-delay: 0.3s;
 }
@@ -342,7 +342,7 @@ nav.scrolled {
     line-height: 1.7;
     color: var(--text-secondary);
     margin-bottom: 32px;
-    max-width: 700px;
+    max-width: 820px;
     animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
     opacity: 0;
 }
