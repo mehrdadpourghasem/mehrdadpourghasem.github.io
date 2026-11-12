@@ -2001,7 +2001,7 @@ footer p {
     background: white;
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 24px 28px;
+    padding: 32px;
     transition: all 0.4s var(--ease-out);
 }
 
@@ -2015,7 +2015,7 @@ footer p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     flex-wrap: wrap;
     gap: 12px;
 }
@@ -2061,7 +2061,7 @@ footer p {
 }
 
 .experience-description li {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 
 .experience-description li:last-child {
