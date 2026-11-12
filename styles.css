@@ -541,7 +541,7 @@ section > * {
 
 /* Page Header */
 .page-header {
-    padding: 108px 64px 36px;
+    padding: 108px 64px 24px;
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
@@ -569,17 +569,24 @@ section > * {
 
 .page-header h1 {
     font-family: var(--font-display);
-    font-size: clamp(40px, 5vw, 56px);
+    font-size: clamp(32px, 3.6vw, 42px);
     font-weight: 600;
     letter-spacing: -0.03em;
     color: var(--text-primary);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     line-height: 1.15;
     max-width: 900px;
 }
 
+/* The first section after a page header does not need the full section
+   padding on top -- the header's own bottom padding already separates them. */
+.page-header + section,
+.page-header + section.full-width {
+    padding-top: 24px;
+}
+
 .page-header .lead {
-    font-size: 19px;
+    font-size: 17px;
     color: var(--text-secondary);
     max-width: 700px;
     line-height: 1.7;
@@ -1491,7 +1498,7 @@ h2 {
    FOOTER
    ============================================ */
 footer {
-    padding: 48px 64px;
+    padding: 26px 64px;
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
