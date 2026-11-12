@@ -53,12 +53,6 @@
                 </svg>
                 Download PDF
             </a>
-            <a href="files/Mehrdad_Pourghasem_Resume.pdf" class="btn btn-secondary" download>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-                1-Page Resume
-            </a>
             <a href="mailto:pourghasem@psu.edu" class="btn btn-secondary">
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
@@ -72,21 +66,14 @@
     <!-- Inline PDF viewer -->
     <section>
         <div class="pdf-viewer">
-            <div class="pdf-tabs" role="tablist" aria-label="Choose a document">
-                <button class="pdf-tab" role="tab" aria-selected="true"
-                        data-pdf="files/Mehrdad_Pourghasem_Resume.pdf">Resume (1 page)</button>
-                <button class="pdf-tab" role="tab" aria-selected="false"
-                        data-pdf="files/Mehrdad_Pourghasem_CV.pdf">Full CV</button>
-            </div>
-
             <iframe class="pdf-frame" id="pdfFrame"
-                    src="files/Mehrdad_Pourghasem_Resume.pdf"
-                    title="Mehrdad Pourghasem &mdash; Resume"></iframe>
+                    src="files/Mehrdad_Pourghasem_CV.pdf"
+                    title="Mehrdad Pourghasem &mdash; CV"></iframe>
 
             <div class="pdf-fallback">
                 <p>This browser won&rsquo;t display PDFs inline. Open it in a new tab instead:</p>
                 <a class="btn btn-primary" id="pdfOpen"
-                   href="files/Mehrdad_Pourghasem_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+                   href="files/Mehrdad_Pourghasem_CV.pdf" target="_blank" rel="noopener">Open PDF</a>
             </div>
         </div>
     </section>
@@ -113,7 +100,7 @@
                         <div class="cv-details">
                             <h3>PhD, Economics</h3>
                             <p class="institution">Pennsylvania State University</p>
-                            <p>Fields: Industrial Organization, Health Economics<br>Dissertation: "Who Chooses Your Hospital? Inherited Demand and the Measurement of Hospital Competition"<br>Committee: Conor Ryan, Paul Grieco, Bradley Setzler, David Vanness</p>
+                            <p>Fields: Industrial Organization, Health Economics<br>Committee: Conor Ryan (chair), Paul Grieco, Bradley Setzler, David Vanness</p>
                         </div>
                     </div>
                     <div class="cv-item">
@@ -136,19 +123,9 @@
                 <div id="research" class="cv-section">
                     <h2>Research</h2>
                     <div class="cv-publication">
-                        <h4>Who Chooses Your Hospital? Inherited Demand and the Measurement of Hospital Competition</h4>
+                        <h4>Who Chooses Your Hospital? Primary-Care Referrals and Hospital Merger Review</h4>
                         <p class="venue">Job Market Paper</p>
-                        <p class="authors">Shows that elective surgical demand is routed by referral menus belonging to primary care organizations rather than chosen by patients, using claims covering 8.5 million commercially insured Californians. Estimates a consideration-set demand model placing 2.4 of 48 available hospitals on the effective menu; replaying observed organization closures, the standard merger-review model recovers 41% of measured within-system diversion against 88% for the menu model.</p>
-                    </div>
-                    <div class="cv-publication">
-                        <h4>Heterogeneous Willingness-to-Pay for Electric Vehicles</h4>
-                        <p class="venue">3rd Year Paper</p>
-                        <p class="authors">Merged U.S. auto sales with detailed vehicle attributes; estimated a random-coefficients logit (BLP) with demographic interactions and micro-moments. Recovered WTP for battery capacity and range; quantified price sensitivity across household segments.</p>
-                    </div>
-                    <div class="cv-publication">
-                        <h4>Road Infrastructure & Agricultural Outcomes</h4>
-                        <p class="venue">Masters Thesis</p>
-                        <p class="authors">Built a county-level panel dataset linking village road access to agricultural land rents using newly compiled data. Produced spatial analyses and maps in ArcGIS to assess how improved road connectivity affected local land values and farming outcomes.</p>
+                        <p class="authors">Hospital merger review relies on demand models in which patients choose among all nearby hospitals. In HMOs and other gatekeeper plans, however, patients reach a hospital through referrals that begin at their primary-care practice, and each practice sends its patients to a small set of hospitals. Linking 184 million claims from California's all-payer claims database (2018&ndash;2023) to federal provider registries, I identify each commercially insured patient's primary-care practice, specialists and surgeon, and reconstruct the sequence of care that leads to her hospital admission. I then re-estimate the willingness-to-pay model used in merger review, restricting each patient's choice set to the hospitals her practice routinely sends patients to. In gatekeeper plans, the referral-based model clears more than a quarter of the mergers the standard model flags. It also predicts that more than twice as many displaced patients stay within the same hospital system. In open-access plans, the two models predict nearly the same diversion.</p>
                     </div>
                 </div>
 
@@ -158,45 +135,42 @@
                     <div class="cv-item">
                         <div class="cv-year">Oct 2019–Dec 2020</div>
                         <div class="cv-details">
-                            <h3>Research Analyst</h3>
-                            <p class="institution">Morvarid Petrochemical Company, Tehran, Iran</p>
+                            <h3>Analyst</h3>
+                            <p class="institution">Morvarid Petrochemical Company</p>
                             <ul>
-                                <li>Led a 4-member team to define a research plan with clear milestones in collaboration with the CEO, translating broad strategic questions into structured analytical objectives.</li>
-                                <li>Developed a dynamic forecasting model linking macroeconomic indicators to company output and profitability; conducted scenario analyses to guide long-term capital investment planning.</li>
-                                <li>Synthesized quantitative results and qualitative insights into executive presentations, providing actionable recommendations for operational improvements and risk mitigation.</li>
+                                <li>Visited the company's sites and worked with its managers to scope open-ended strategic questions into a defined project with a work plan and milestones.</li>
+                                <li>Built a quantitative model of how external conditions such as inflation and the exchange rate feed through to output and profitability, ran scenario analyses, and presented the results to the executive team.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="cv-item">
                         <div class="cv-year">Oct 2017–Dec 2018</div>
                         <div class="cv-details">
-                            <h3>Research Analyst</h3>
-                            <p class="institution">Iranian Water Policy Research Institute, Tehran, Iran</p>
+                            <h3>Analyst</h3>
+                            <p class="institution">Iranian Water Policy Research Institute</p>
                             <ul>
-                                <li>Evaluated regional water-market design alternatives by combining field research (interviews with farmers and officials) with analysis of international case studies, informing strategic policy recommendations.</li>
-                                <li>Quantified economic impacts of alternative water allocation policies using statistical models, documenting assumptions and data sources to support evidence-based decision making.</li>
-                                <li>Presented findings to 100+ stakeholders at a multi-day Chamber of Commerce forum, distilling complex analyses into actionable options and trade-offs for decision-makers.</li>
+                                <li>Framed the client's needs as research questions for the project's first phase, reviewed the literature, and developed a conceptual model of regional water allocation.</li>
+                                <li>Ran the field interviews and wrote up the findings; presented them at a Chamber of Commerce forum attended by more than 100 farmers, officials, and business representatives.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="cv-item">
                         <div class="cv-year">Jul 2017–Sep 2017</div>
                         <div class="cv-details">
-                            <h3>Research Analyst</h3>
-                            <p class="institution">Urmia Lake Restoration Commission, Tehran, Iran</p>
+                            <h3>Analyst</h3>
+                            <p class="institution">Urmia Lake Restoration Commission</p>
                             <ul>
-                                <li>Gathered and documented business requirements for three startup initiatives; translated stakeholder needs into clear technical specifications for engineering.</li>
+                                <li>Turned the project's analyses into policy reports and presentations for the commission.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="cv-item">
                         <div class="cv-year">Jul 2016–Jul 2017</div>
                         <div class="cv-details">
-                            <h3>Business Analyst</h3>
-                            <p class="institution">Smartup Ventures, Tehran, Iran</p>
+                            <h3>Analyst</h3>
+                            <p class="institution">Smartup Ventures</p>
                             <ul>
-                                <li>Conducted market research and feasibility analyses for three new startup ventures, delivering comprehensive reports to inform strategic investment decisions by senior leadership.</li>
-                                <li>Promoted to CEO Assistant within 6 months for exceptional performance; led the company's rebranding initiative by coordinating cross-functional teams (designers, developers) to launch a new corporate website ahead of schedule.</li>
+                                <li>Benchmarked contract terms across peer firms and prepared briefs for the CEO.</li>
                             </ul>
                         </div>
                     </div>
@@ -218,7 +192,7 @@
                         <div class="cv-details">
                             <h3>Teaching Assistant</h3>
                             <p class="institution">Pennsylvania State University</p>
-                            <p>International Finance; Advanced International Trade.</p>
+                            <p>Intermediate Microeconomic Analysis; International Finance, Open Economy Macroeconomics; Advanced International Trade.</p>
                         </div>
                     </div>
                     <div class="cv-item">
@@ -294,9 +268,7 @@
     <script>
         // PDF viewer tabs
         (function () {
-            const frame = document.getElementById('pdfFrame');
-            const open  = document.getElementById('pdfOpen');
-            const wrap  = document.querySelector('.pdf-viewer');
+            const wrap = document.querySelector('.pdf-viewer');
 
             // Show the fallback only when the browser really cannot render a PDF
             // inline. navigator.pdfViewerEnabled is the standard signal; older
@@ -312,18 +284,6 @@
                 return true;
             }
             if (wrap && !canShowPdf()) wrap.classList.add('no-pdf');
-            document.querySelectorAll('.pdf-tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    document.querySelectorAll('.pdf-tab')
-                        .forEach(t => t.setAttribute('aria-selected', String(t === tab)));
-                    const src = tab.dataset.pdf;
-                    if (frame) {
-                        frame.src = src;
-                        frame.title = 'Mehrdad Pourghasem \u2014 ' + tab.textContent.trim();
-                    }
-                    if (open) open.href = src;
-                });
-            });
         })();
 
         // Active nav link on scroll
